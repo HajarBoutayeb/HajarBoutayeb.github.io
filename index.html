@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Hajar Boutayeb — Data Scientist | AI & Machine Learning. Master's in Data Science & Big Data, Casablanca. Vision-Language Models, RAG, AI Agents, Computer Vision and Data Analytics.">
+<meta property="og:title" content="Hajar Boutayeb — Data Scientist | AI & Machine Learning">
+<meta property="og:description" content="Portfolio: VLM evaluation for water meter anomalies, LangGraph invoice agent, LangChain RAG, Tableau dashboards and ML projects.">
+<meta property="og:type" content="website">
+  <meta property="og:url" content="https://hajarboutayeb.github.io/">
+<meta property="og:image" content="https://hajarboutayeb.github.io/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Hajar Boutayeb — Data Scientist | AI &amp; Machine Learning">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hajar Boutayeb — Data Scientist | AI &amp; Machine Learning">
+<meta name="twitter:description" content="Portfolio: VLM evaluation for water meter anomalies, LangGraph invoice agent, LangChain RAG, Tableau dashboards and ML projects.">
+<meta name="twitter:image" content="https://hajarboutayeb.github.io/og-image.png">
+<meta name="twitter:image:alt" content="Hajar Boutayeb — Data Scientist | AI &amp; Machine Learning">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230A0F1E'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%232DD4BF' font-family='sans-serif' font-weight='700'>H</text></svg>">
+<title>Hajar Boutayeb — Data Scientist | AI &amp; Machine Learning</title>
+<script>
+(function(){try{var t=localStorage.getItem('hb-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}var l=localStorage.getItem('hb-lang');if(l==='fr'||l==='en'){document.documentElement.setAttribute('lang',l);document.documentElement.setAttribute('data-lang',l);}}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070B14; --bg2:#0A0F1E; --surface:#0E1526; --surface2:#111A30;
+  --line:#1E2A44; --line2:#2A3A5E;
+  --text:#E8ECF5; --muted:#A3AEC6; --faint:#7C89A3;
+  --teal:#2DD4BF; --teal-dim:#134E4A; --violet:#A78BFA;
+  --on-teal:#04211C; --header-bg:rgba(7,11,20,.88);
+  --flag-a:#0F1B2E; --flag-b:#0C1424; --flag-border:#24505A; --meter-bg:#081120;
+  --shadow:0 24px 60px rgba(0,0,0,.35);
+  --radius:16px; color-scheme:dark;
+}
+:root[data-theme="light"]{
+  --bg:#F6F8FB; --bg2:#FFFFFF; --surface:#FFFFFF; --surface2:#EEF2F7;
+  --line:#DCE3EE; --line2:#B4C0D4;
+  --text:#0B1526; --muted:#42536B; --faint:#5B6B84;
+  --teal:#0C7566; --teal-dim:#BDEBE2; --violet:#6D28D9;
+  --on-teal:#FFFFFF; --header-bg:rgba(255,255,255,.9);
+  --flag-a:#EAF7F3; --flag-b:#FFFFFF; --flag-border:#7FC9BB; --meter-bg:#EFF4F8;
+  --shadow:0 18px 44px rgba(15,35,60,.12);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip;transition:background-color .25s ease,color .25s ease}
+.hero-grid>*,.about-grid>*,.flagship-inner>*,.other-item>*,.proj-grid>*,.skills-grid>*{min-width:0}
+p,li{overflow-wrap:break-word}
+a{color:inherit}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.08;margin:0}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.mono{font-family:"JetBrains Mono",monospace}
+
+/* NAV */
+header{position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:68px}
+.brand{font-family:"Space Grotesk";font-weight:700;font-size:19px;text-decoration:none;letter-spacing:-.02em;white-space:nowrap}
+.brand span{color:var(--teal)}
+.navlinks{display:flex;gap:2px;align-items:center}
+.navlinks a{text-decoration:none;color:var(--muted);font-size:14.5px;font-weight:500;padding:10px 11px;min-height:40px;display:inline-flex;align-items:center;border-radius:8px;white-space:nowrap}
+.navlinks a:hover{color:var(--text);background:var(--surface)}
+.navlinks a.btn-primary{color:var(--on-teal)}
+.navlinks a.btn-primary:hover{color:var(--on-teal);background:var(--teal)}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:11px 20px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid transparent;cursor:pointer;white-space:nowrap}
+.btn-primary{background:var(--teal);color:var(--on-teal)}
+.btn-primary:hover{filter:brightness(1.12)}
+.btn-ghost{background:transparent;color:var(--text);border-color:var(--line2)}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
+.btn-sm{min-height:40px;padding:8px 16px;font-size:14px}
+.controls{display:flex;align-items:center;gap:8px;flex:none}
+.lang-switch{display:flex;border:1px solid var(--line2);border-radius:999px;overflow:hidden;background:var(--surface)}
+.lang-btn{border:0;background:transparent;color:var(--muted);font-family:Inter,sans-serif;font-weight:700;font-size:13px;min-height:38px;padding:7px 12px;cursor:pointer}
+.lang-btn.active{background:var(--teal);color:var(--on-teal)}
+.theme-btn{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;min-height:40px;border-radius:999px;border:1px solid var(--line2);background:var(--surface);color:var(--text);font-size:17px;cursor:pointer;line-height:1}
+.theme-btn:hover{border-color:var(--teal);color:var(--teal)}
+.menu-btn{display:none;background:var(--surface);border:1px solid var(--line);color:var(--text);width:44px;height:44px;border-radius:10px;font-size:20px;cursor:pointer}
+@media(max-width:1120px){
+  .menu-btn{display:flex;align-items:center;justify-content:center}
+  .navlinks{display:none;position:absolute;top:68px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;padding:12px 20px 18px;box-shadow:var(--shadow)}
+  .navlinks.open{display:flex}
+  .navlinks a{padding:12px}
+  .navlinks .btn{justify-content:center;margin-top:6px}
+}
+@media(max-width:1240px){.navlinks a{padding:10px 8px;font-size:14px}.nav{gap:10px}}
+@media(max-width:480px){.brand{font-size:16px;letter-spacing:-.03em}.lang-btn{padding:6px 8px;font-size:12.5px;min-height:36px}.theme-btn{width:36px;height:36px;min-height:36px;font-size:15px}.menu-btn{width:40px;height:40px}.controls{gap:6px}.nav{gap:8px}header .wrap{padding:0 12px}}
+
+/* HERO */
+.hero{padding:72px 0 56px;border-bottom:1px solid var(--line);background:radial-gradient(900px 420px at 85% -10%, rgba(45,212,191,.09), transparent 60%), var(--bg)}
+:root[data-theme="light"] .hero{background:radial-gradient(900px 420px at 85% -10%, rgba(12,117,102,.10), transparent 60%), var(--bg)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(44px,6vw,68px);letter-spacing:-.03em;font-weight:700}
+.hero h1 em{font-style:normal;color:var(--teal)}
+.hero-title{font-family:"Space Grotesk";font-size:clamp(20px,2.6vw,27px);font-weight:600;color:var(--text);margin-top:14px;letter-spacing:-.01em}
+.hero-title .sep{color:var(--teal);margin:0 6px}
+.hero-lede{color:var(--muted);font-size:17.5px;max-width:56ch;margin:18px 0 0}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.pill{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--surface);color:var(--muted);font-size:13.5px;padding:7px 12px;border-radius:999px;min-height:36px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--teal);flex:none}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-social{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.hero-social a{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:8px 14px;border:1px solid var(--line);border-radius:10px;text-decoration:none;font-size:14px;font-weight:500;color:var(--muted);background:var(--surface)}
+.hero-social a:hover{color:var(--teal);border-color:var(--teal-dim)}
+
+/* Illustrative eval panel — no numbers, by design */
+.eval-panel{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+.eval-head{display:flex;justify-content:space-between;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:18px}
+.eval-head strong{font-family:"Space Grotesk";font-size:15px}
+.eval-head span{font-size:12px;color:var(--faint)}
+.flow{display:flex;flex-direction:column;gap:12px}
+.flow-step{display:flex;gap:14px;align-items:flex-start;background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:14px}
+.flow-step b{font-size:14.5px;display:block}
+.flow-step p{margin:2px 0 0;color:var(--muted);font-size:13.5px;line-height:1.5}
+.flow-ico{width:38px;height:38px;flex:none;border-radius:10px;background:var(--teal-dim);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--text)}
+:root[data-theme="light"] .flow-ico{color:#075247}
+.pulse{animation:pulse 2.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.45}50%{opacity:1}}
+.eval-note{margin-top:16px;font-size:12.5px;color:var(--faint);border-top:1px dashed var(--line);padding-top:12px}
+.scanline{height:6px;border-radius:99px;background:var(--line);overflow:hidden;margin-top:14px}
+.scanline i{display:block;height:100%;width:38%;background:var(--teal);border-radius:99px;animation:scan 3.2s ease-in-out infinite}
+@keyframes scan{0%{transform:translateX(-110%)}100%{transform:translateX(290%)}}
+
+/* SECTIONS */
+section{padding:72px 0}
+.sec-head{max-width:720px;margin-bottom:36px}
+.sec-head h2{font-size:clamp(30px,4vw,40px);letter-spacing:-.02em}
+.sec-head p{color:var(--muted);margin:12px 0 0;font-size:16.5px}
+.label{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr}}
+.about-grid p{color:var(--muted);margin:0 0 16px}
+.about-grid p strong{color:var(--text)}
+.facts{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.facts dl{margin:0;display:grid;gap:14px}
+.facts dt{font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.facts dd{margin:2px 0 0;font-weight:500}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media(max-width:760px){.skills-grid{grid-template-columns:1fr}}
+.skill-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.skill-card h3{font-size:18px;margin-bottom:6px}
+.skill-card p{color:var(--muted);font-size:14.5px;margin:0 0 14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:13px;font-weight:500;background:var(--surface2);border:1px solid var(--line);padding:6px 11px;border-radius:999px;min-height:32px;display:inline-flex;align-items:center;color:var(--text)}
+.tag.hl{border-color:var(--teal-dim);color:var(--teal)}
+
+/* PROJECTS */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.filter-btn{min-height:40px;padding:8px 16px;border-radius:999px;border:1px solid var(--line2);background:transparent;color:var(--muted);font-weight:600;font-size:14px;cursor:pointer;font-family:Inter}
+.filter-btn.active{background:var(--teal);color:var(--on-teal);border-color:var(--teal)}
+.flagship{background:linear-gradient(180deg,var(--flag-a),var(--flag-b));border:1px solid var(--flag-border);border-radius:22px;overflow:hidden;margin-bottom:22px}
+.flagship-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:0}
+@media(max-width:900px){.flagship-inner{grid-template-columns:1fr}}
+.flagship-body{padding:34px}
+@media(max-width:600px){.flagship-body{padding:24px}}
+.flag-badge{display:inline-flex;align-items:center;gap:7px;background:var(--teal);color:var(--on-teal);font-weight:700;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;min-height:32px}
+.flagship h3{font-size:clamp(26px,3.4vw,34px);letter-spacing:-.02em;margin:16px 0 10px}
+.flagship p{color:var(--muted);margin:0 0 14px}
+.flagship p strong{color:var(--text)}
+.meter-viz{background:var(--meter-bg);border-left:1px solid var(--line);padding:28px;display:flex;flex-direction:column;justify-content:center;gap:16px}
+@media(max-width:900px){.meter-viz{border-left:none;border-top:1px solid var(--line)}}
+.task-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.task{background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.task b{font-size:14px;display:block}
+.task span{font-size:13px;color:var(--muted)}
+.svg-box{fill:var(--surface);stroke:var(--line2)}
+.svg-main{fill:var(--text)}
+.svg-sub{fill:var(--muted)}
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:860px){.proj-grid{grid-template-columns:1fr}}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column}
+.proj:hover{border-color:var(--line2)}
+.proj .kicker{font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--violet);margin-bottom:10px}
+.proj .kicker.teal{color:var(--teal)}
+.proj h3{font-size:21px;letter-spacing:-.01em;margin-bottom:8px}
+.proj p{color:var(--muted);font-size:15px;margin:0 0 12px}
+.proj p strong{color:var(--text)}
+.proj .tags{margin-top:auto;padding-top:8px}
+.proj-link{display:inline-flex;align-items:center;gap:7px;margin-top:16px;font-weight:600;font-size:14.5px;color:var(--teal);text-decoration:none;min-height:40px}
+.proj-link:hover{text-decoration:underline}
+.hidden-by-filter{display:none!important}
+
+/* OTHER PROJECTS */
+.other-list{display:grid;gap:12px}
+.other-item{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start}
+@media(max-width:700px){.other-item{grid-template-columns:1fr}}
+.other-item h3{font-size:17px;margin-bottom:4px}
+.other-item p{color:var(--muted);font-size:14.5px;margin:0}
+.other-item .tags{margin-top:10px}
+.score-box{background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:16px;width:100%;max-width:340px}
+@media(max-width:700px){.score-box{max-width:none}}
+.score-note .mono{overflow-wrap:anywhere}
+.score-row span{overflow-wrap:break-word}
+.score-box h4{margin:0 0 4px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--teal)}
+.score-box h4.v{color:var(--violet)}
+.score-row{display:flex;justify-content:space-between;gap:12px;font-size:14px;padding:7px 0;border-bottom:1px dashed var(--line)}
+.score-row:last-child{border-bottom:none}
+.score-row b{font-family:"JetBrains Mono";font-weight:500;color:var(--text)}
+.score-row span{color:var(--muted)}
+.score-note{font-size:12px;color:var(--faint);margin-top:8px;line-height:1.5}
+
+/* EXPERIENCE / EDUCATION */
+.timeline{display:grid;gap:18px}
+.tl-item{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:grid;grid-template-columns:210px 1fr;gap:24px}
+@media(max-width:760px){.tl-item{grid-template-columns:1fr;gap:8px}}
+.tl-when{font-family:"JetBrains Mono";font-size:13.5px;color:var(--teal)}
+.tl-item h3{font-size:20px;margin-bottom:4px}
+.tl-org{color:var(--muted);font-weight:500;margin-bottom:12px}
+.tl-item ul{margin:0;padding-left:18px;color:var(--muted)}
+.tl-item li{margin-bottom:6px}
+.tl-item li strong{color:var(--text)}
+
+/* CONTACT */
+.contact{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.contact-box{max-width:680px}
+.contact-box h2{font-size:clamp(30px,4vw,42px);letter-spacing:-.02em}
+.contact-box p{color:var(--muted);font-size:17px}
+.contact-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+footer{padding:28px 0 36px;color:var(--faint);font-size:13.5px}
+.footer-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">Hajar<span>.</span>Boutayeb</a>
+    <nav class="navlinks" id="navLinks" aria-label="Main">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#skills" data-i18n="nav.skills">Skills</a>
+      <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#experience" data-i18n="nav.experience">Experience</a>
+      <a href="#education" data-i18n="nav.education">Education</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+      <a class="btn btn-primary btn-sm" href="Hajar_Boutayeb_CV_Data_Science.pdf" download="Hajar_Boutayeb_CV_Data_Science.pdf" data-i18n="nav.cv" target="_blank" rel="noopener">Download CV ↓</a>
+    </nav>
+    <div class="controls">
+      <div class="lang-switch" role="group" aria-label="Language / Langue">
+        <button type="button" class="lang-btn active" data-lang-btn="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-btn" data-lang-btn="fr" aria-pressed="false">FR</button>
+      </div>
+      <button type="button" class="theme-btn" id="themeBtn" aria-label="Switch to light mode" title="Light / Dark">☀</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Hajar <em>Boutayeb</em></h1>
+      <div class="hero-title" data-i18n="hero.title">Data Scientist <span class="sep">|</span> AI &amp; Machine Learning</div>
+      <p class="hero-lede" data-i18n="hero.lede">Master's graduate in Data Science &amp; Big Data from FSBM Casablanca. I build and evaluate AI systems — Vision-Language Models, RAG chatbots and autonomous agents — and turn data into clear, decision-ready analysis.</p>
+      <div class="hero-meta">
+        <span class="pill"><span class="dot"></span> <span data-i18n="hero.pill1">Open to Junior roles — Casablanca, Morocco</span></span>
+        <span class="pill">📍 <span data-i18n="hero.pill2">Casablanca, Morocco</span></span>
+        <span class="pill" data-i18n="hero.pill3">Master Data Science &amp; Big Data — FSBM</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#projects" data-i18n="hero.view">View Projects →</a>
+        <a class="btn btn-ghost" href="Hajar_Boutayeb_CV_Data_Science.pdf" download="Hajar_Boutayeb_CV_Data_Science.pdf" data-i18n="hero.cv" target="_blank" rel="noopener">Download CV</a>
+        <a class="btn btn-ghost" href="#contact" data-i18n="hero.contact">Contact Me</a>
+      </div>
+      <div class="hero-social">
+        <a href="https://github.com/HajarBoutayeb" target="_blank" rel="noopener">⌥ GitHub — @HajarBoutayeb</a>
+        <a href="https://www.linkedin.com/in/hajar-boutayeb-25bb90303/" target="_blank" rel="noopener">in LinkedIn</a>
+        <a href="mailto:hajarboutayeb3@gmail.com">✉ hajarboutayeb3@gmail.com</a>
+      </div>
+    </div>
+
+    <div class="eval-panel" data-i18n-aria="eval.aria" aria-label="Illustrative model evaluation flow">
+      <div class="eval-head"><strong data-i18n="eval.title">Model evaluation — how I work</strong><span class="mono" data-i18n="eval.tag">illustrative</span></div>
+      <div class="flow">
+        <div class="flow-step"><div class="flow-ico pulse">◉</div><div><b data-i18n="eval.s1">Detect</b><p data-i18n="eval.s1d">Is there an anomaly in this image at all?</p></div></div>
+        <div class="flow-step"><div class="flow-ico">⬢</div><div><b data-i18n="eval.s2">Classify</b><p data-i18n="eval.s2d">What type of defect is it?</p></div></div>
+        <div class="flow-step"><div class="flow-ico">⌖</div><div><b data-i18n="eval.s3">Localize</b><p data-i18n="eval.s3d">Where exactly is the problem?</p></div></div>
+        <div class="flow-step"><div class="flow-ico">≡</div><div><b data-i18n="eval.s4">Describe</b><p data-i18n="eval.s4d">Explain the finding in clear language.</p></div></div>
+      </div>
+      <div class="scanline" aria-hidden="true"><i></i></div>
+      <div class="eval-note" data-i18n="eval.note">Illustrative workflow from the Water Meter VLM project — the four evaluation tasks applied across 12 Vision-Language Models. No scores are shown here; verified results live in the project repositories.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="label" data-i18n="about.label">About</div><h2 data-i18n="about.h2">Data science, built on evaluation — not demos.</h2></div>
+    <div class="about-grid">
+      <div class="reveal">
+        <p data-i18n="about.p1">I hold a <strong>Master's in Data Science &amp; Big Data (Data Science track) from FSBM, Casablanca</strong>. My final-year internship at <strong>SRM-CS</strong> focused on a question that matters in the field: can Vision-Language Models reliably diagnose anomalies on real water meters?</p>
+        <p data-i18n="about.p2">To answer it properly, I prepared and validated a multimodal dataset of <strong>445 images</strong> — <strong>92 real healthy meter images and 353 defective examples, synthetically generated with Gemini from those healthy images and then manually validated</strong> — built a structured multiple-choice (MCQ) evaluation, and compared <strong>12 VLMs</strong> on detection, classification, localization and description.</p>
+        <p data-i18n="about.p3">Alongside computer vision, I build <strong>LLM systems that do real work</strong>: a LangGraph multi-modal invoice agent and a LangChain RAG assistant, both with structured outputs and evaluation. I also do the analytics side well — SQL queries and Python data processing, then Tableau and Power BI dashboards grounded in careful data cleaning.</p>
+        <p data-i18n="about.p4"><strong>My objective:</strong> a Junior Data Scientist, Data Analyst or AI Engineer role in Casablanca, Morocco, where evaluation and data quality matter as much as the model.</p>
+      </div>
+      <aside class="facts reveal">
+        <dl>
+          <div><dt data-i18n="facts.locL">Location</dt><dd data-i18n="facts.loc">Casablanca, Morocco</dd></div>
+          <div><dt data-i18n="facts.rolesL">Target roles</dt><dd data-i18n="facts.roles">Junior Data Scientist · Data Analyst · AI Engineer · Computer Vision Engineer</dd></div>
+          <div><dt data-i18n="facts.availL">Availability</dt><dd data-i18n="facts.avail">Immediate</dd></div>
+          <div><dt data-i18n="facts.langL">Languages</dt><dd data-i18n="facts.lang">Arabic (native) · French (working) · English (learning)</dd></div>
+          <div><dt data-i18n="facts.focusL">Focus areas</dt><dd data-i18n="facts.focus">VLMs · LLMs &amp; RAG · AI Agents · Computer Vision · Data Analytics</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="label" data-i18n="skills.label">Technical Skills</div><h2 data-i18n="skills.h2">Only what my projects actually use.</h2><p data-i18n="skills.sub">Every skill below appears in my GitHub repositories or my SRM-CS internship work.</p></div>
+    <div class="skills-grid">
+      <div class="skill-card reveal"><h3 data-i18n="sk1.t">Languages &amp; Data</h3><p data-i18n="sk1.d">Day-to-day analysis, cleaning and modelling.</p><div class="tags"><span class="tag hl">Python</span><span class="tag">SQL</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Scikit-learn</span><span class="tag">Jupyter</span><span class="tag">SQLite</span></div></div>
+      <div class="skill-card reveal"><h3 data-i18n="sk2.t">AI, ML &amp; Computer Vision</h3><p data-i18n="sk2.d">Model building and — just as important — model evaluation.</p><div class="tags"><span class="tag hl" data-i18n="tag.vlm">Vision-Language Models</span><span class="tag hl">Transformers</span><span class="tag" data-i18n="tag.cv">Computer Vision</span><span class="tag">Random Forest</span><span class="tag">Gradient Boosting</span><span class="tag">K-Means</span><span class="tag">Logistic Regression</span><span class="tag">TF-IDF · SMOTE</span></div></div>
+      <div class="skill-card reveal"><h3 data-i18n="sk3.t">LLMs, RAG &amp; Agents</h3><p data-i18n="sk3.d">End-to-end LLM applications with structured outputs.</p><div class="tags"><span class="tag hl">LangChain</span><span class="tag hl">LangGraph</span><span class="tag">RAG · RAGAS</span><span class="tag">Gemini</span><span class="tag">Vertex AI</span><span class="tag">Groq</span><span class="tag">Docling</span><span class="tag">Pydantic</span></div></div>
+      <div class="skill-card reveal"><h3 data-i18n="sk4.t">Visualization &amp; BI</h3><p data-i18n="sk4.d">Dashboards decision-makers can actually read.</p><div class="tags"><span class="tag hl">Tableau</span><span class="tag hl">Power BI</span><span class="tag">Matplotlib</span><span class="tag" data-i18n="tag.sankey">Sankey Diagrams</span><span class="tag">EDA</span><span class="tag" data-i18n="tag.story">Data Storytelling</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="label" data-i18n="proj.label">Featured Projects</div><h2 data-i18n="proj.h2">Six projects that show the range.</h2><p data-i18n="proj.sub">From VLM evaluation in industry to agents, RAG and analytics. Each links to its public GitHub repository.</p></div>
+
+    <div class="filters reveal" role="group" data-i18n-aria="filter.aria" aria-label="Filter projects">
+      <button class="filter-btn active" data-filter="all" data-i18n="filter.all" aria-pressed="true">All</button>
+      <button class="filter-btn" data-filter="ai" aria-pressed="false" data-i18n="filter.ai">AI &amp; LLM</button>
+      <button class="filter-btn" data-filter="cv" aria-pressed="false" data-i18n="filter.cv">Computer Vision</button>
+      <button class="filter-btn" data-filter="analytics" aria-pressed="false" data-i18n="filter.analytics">Data Analytics</button>
+      <button class="filter-btn" data-filter="ml" aria-pressed="false" data-i18n="filter.ml">Machine Learning</button>
+    </div>
+
+    <!-- FLAGSHIP -->
+    <article class="flagship reveal" data-cat="cv ai">
+      <div class="flagship-inner">
+        <div class="flagship-body">
+          <span class="flag-badge" data-i18n="flag.badge">★ Flagship — PFE at SRM-CS</span>
+          <h3 data-i18n="flag.title">Visual Analysis of Water Meter Anomalies with Vision-Language Models</h3>
+          <p data-i18n="flag.p1"><strong>Problem:</strong> Faulty water meters are normally diagnosed by manual visual inspection — slow, inconsistent, and hard to scale.</p>
+          <p data-i18n="flag.p2"><strong>Approach:</strong> I prepared a multimodal dataset of 445 images (92 real healthy images + 353 defective examples, synthetically generated with Gemini from the healthy images and then manually validated), generated structured evaluation questions, and benchmarked <strong>12 existing VLMs</strong> across four tasks. Methodology only is shown here — no confidential SRM-CS data or internal images are published.</p>
+          <div class="tags"><span class="tag hl">Python</span><span class="tag">Transformers</span><span class="tag">Gemini</span><span class="tag">Vertex AI</span><span class="tag">Pandas</span><span class="tag" data-i18n="tag.vlmeval">VLM Evaluation</span></div>
+          <a class="proj-link" href="https://github.com/HajarBoutayeb/WATER_METER_AI_PFE" target="_blank" rel="noopener" data-i18n="link.github">View on GitHub →</a>
+        </div>
+        <div class="meter-viz" aria-hidden="true">
+          <div style="font-family:'Space Grotesk';font-weight:600" data-i18n="flag.viz">Four evaluation tasks, one benchmark</div>
+          <div class="task-list">
+            <div class="task"><b data-i18n="task1.t">Detection</b><span data-i18n="task1.d">Anomaly present — yes / no</span></div>
+            <div class="task"><b data-i18n="task2.t">Classification</b><span data-i18n="task2.d">Type of defect</span></div>
+            <div class="task"><b data-i18n="task3.t">Localization</b><span data-i18n="task3.d">Where the defect sits</span></div>
+            <div class="task"><b data-i18n="task4.t">Description</b><span data-i18n="task4.d">Readable explanation</span></div>
+          </div>
+          <svg viewBox="0 0 320 110" role="img" aria-label="Schematic diagram of a water meter reading being analysed">
+            <rect class="svg-box" x="10" y="18" width="130" height="74" rx="12" stroke-width="1"/>
+            <circle cx="52" cy="55" r="20" fill="none" stroke="#2DD4BF" stroke-width="2"/><circle cx="98" cy="55" r="12" fill="none" stroke="#A78BFA" stroke-width="2"/>
+            <path d="M140 55 H185" stroke="#2DD4BF" stroke-width="2" stroke-dasharray="5 4"/>
+            <rect class="svg-box" x="188" y="28" width="122" height="54" rx="10" stroke-width="1"/>
+            <text class="svg-main" x="249" y="50" text-anchor="middle" font-size="11" font-family="monospace" data-i18n="flag.svg1">VLM ANALYSIS</text>
+            <text class="svg-sub" x="249" y="68" text-anchor="middle" font-size="10" font-family="monospace" data-i18n="flag.svg2">detect · classify</text>
+          </svg>
+          <div style="font-size:13px;color:var(--faint)" data-i18n="flag.note">Schematic illustration — not a real meter image. Dataset: 92 healthy + 353 defective (synthetically generated with Gemini, manually validated) — 445 images in total.</div>
+        </div>
+      </div>
+    </article>
+
+    <div class="proj-grid">
+      <article class="proj reveal" data-cat="ai">
+        <div class="kicker" data-i18n="p2.k">AI Agents · LangGraph</div>
+        <h3 data-i18n="p2.t">Autonomous Multi-Modal Invoice Agent</h3>
+        <p data-i18n="p2.p1"><strong>Problem:</strong> Invoice processing mixes PDFs, scanned images and business rules — manual entry is slow and error-prone.</p>
+        <p data-i18n="p2.p2"><strong>Approach:</strong> A stateful LangGraph workflow: Docling parses PDFs, Groq Llama 3.1 handles text, Gemini 1.5 Flash handles vision, Pydantic enforces structured outputs, and conditional rules (amount thresholds, VIP tiers) route each invoice. Results persist to SQLite.</p>
+        <div class="tags"><span class="tag">LangGraph</span><span class="tag">Docling</span><span class="tag">Gemini</span><span class="tag">Groq</span><span class="tag">Pydantic</span><span class="tag">SQLite</span></div>
+        <a class="proj-link" href="https://github.com/HajarBoutayeb/autonomous-invoice-agent" target="_blank" rel="noopener" data-i18n="link.github">View on GitHub →</a>
+      </article>
+
+      <article class="proj reveal" data-cat="ai">
+        <div class="kicker" data-i18n="p3.k">RAG · LLMs · LangChain</div>
+        <h3 data-i18n="p3.t">RAG Chatbot — Tableau Course Assistant</h3>
+        <p data-i18n="p3.p1"><strong>Problem:</strong> Students need precise answers from course documents, not generic chatbot guesses.</p>
+        <p data-i18n="p3.p2"><strong>Approach:</strong> A LangChain RAG pipeline over Tableau course material with MultiQuery Retrieval, reranking, and <strong>RAGAS evaluation</strong> of answer quality — powered by Groq Llama 3.3 70B.</p>
+        <div class="tags"><span class="tag">LangChain</span><span class="tag">RAG</span><span class="tag">RAGAS</span><span class="tag">Groq Llama 3.3 70B</span><span class="tag" data-i18n="tag.rerank">Reranking</span></div>
+        <a class="proj-link" href="https://github.com/HajarBoutayeb/langchain-rag-tableau-assistant" target="_blank" rel="noopener" data-i18n="link.github">View on GitHub →</a>
+      </article>
+
+      <article class="proj reveal" data-cat="analytics">
+        <div class="kicker teal" data-i18n="p4.k">Data Analytics · Tableau</div>
+        <h3 data-i18n="p4.t">Global Health — Decision Dashboards</h3>
+        <p data-i18n="p4.p1"><strong>Problem:</strong> A 134 MB global health dataset (22 variables) is unusable for decisions in raw form.</p>
+        <p data-i18n="p4.p2"><strong>Approach:</strong> Cleaning with median imputation and deduplication, engineered features (Disease Burden Index from DALYs, Risk Level), full EDA, and <strong>three Tableau dashboards</strong> covering global and geographical disease analysis.</p>
+        <div class="tags"><span class="tag">Tableau</span><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">EDA</span><span class="tag" data-i18n="tag.feat">Feature Engineering</span></div>
+        <a class="proj-link" href="https://github.com/HajarBoutayeb/Data-Analytics-Decision-Dashboards" target="_blank" rel="noopener" data-i18n="link.github">View on GitHub →</a>
+      </article>
+
+      <article class="proj reveal" data-cat="ml analytics">
+        <div class="kicker teal" data-i18n="p5.k">Machine Learning · Clustering</div>
+        <h3 data-i18n="p5.t">Marketing Customer Segmentation</h3>
+        <p data-i18n="p5.p1"><strong>Problem:</strong> Treating every customer the same wastes marketing effort.</p>
+        <p data-i18n="p5.p2"><strong>Approach:</strong> Segmentation with <strong>K-Means and Hierarchical Clustering</strong>, comparing cluster structure to produce interpretable customer groups a marketing team can act on.</p>
+        <div class="tags"><span class="tag">K-Means</span><span class="tag" data-i18n="tag.hier">Hierarchical Clustering</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span></div>
+        <a class="proj-link" href="https://github.com/HajarBoutayeb/marketing-customer-segmentation-analysis" target="_blank" rel="noopener" data-i18n="link.github">View on GitHub →</a>
+      </article>
+
+      <article class="proj reveal" data-cat="ml">
+        <div class="kicker teal" data-i18n="p6.k">NLP · Predictive ML</div>
+        <h3 data-i18n="p6.t">Predictive User Journey Analytics</h3>
+        <p data-i18n="p6.p1"><strong>Problem:</strong> Can browsing behaviour predict whether a user will choose an Annual or Monthly subscription?</p>
+        <p data-i18n="p6.p2"><strong>Approach:</strong> End-to-end pipeline combining navigation analysis (Sankey diagrams), NLP features with TF-IDF, SMOTE for class imbalance, and Logistic Regression for prediction.</p>
+        <div class="tags"><span class="tag">NLP · TF-IDF</span><span class="tag">SMOTE</span><span class="tag">Logistic Regression</span><span class="tag">Sankey</span></div>
+        <a class="proj-link" href="https://github.com/HajarBoutayeb/Predictive-User-Journey-Analytics" target="_blank" rel="noopener" data-i18n="link.github">View on GitHub →</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- OTHER PROJECTS -->
+<section id="other" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="label" data-i18n="other.label">Other Projects</div><h2 data-i18n="other.h2">More work, smaller stage.</h2></div>
+    <div class="other-list">
+
+      <article class="other-item reveal">
+        <div>
+          <h3 data-i18n="bias.t">Video Interview Bias Detection — Verified Evaluation</h3>
+          <p data-i18n="bias.d">Master's project (FS Ben M'Sik, 2024–2025) on automatic bias detection in video interviews across text, audio and image. Scores below were verified on 17 Nov 2026 directly from the repository's evaluation images and its final evaluation spreadsheet — modality-level and model-level results are kept separate, as they measure different things.</p>
+          <div class="tags"><span class="tag">Whisper</span><span class="tag">MFCC / Prosody</span><span class="tag">OpenFace</span><span class="tag">Python</span></div>
+          <a class="proj-link" href="https://github.com/HajarBoutayeb/video-interview-bias-detection" target="_blank" rel="noopener" data-i18n="link.repo">Repository →</a>
+        </div>
+        <div class="score-box">
+          <h4 data-i18n="bias.h1">Modality-level — best F1 per modality</h4>
+          <div class="score-row"><span data-i18n="bias.r1">Text — Random Forest · best F1, text modality</span><b>90.3%</b></div>
+          <div class="score-row"><span data-i18n="bias.r2">Audio — SVM · F1 on test set, audio modality</span><b>83.6%</b></div>
+          <div class="score-row"><span data-i18n="bias.r3">Image — Gradient Boosting · F1-weighted, gender evaluation only</span><b>82.1%</b></div>
+          <h4 class="v" style="margin-top:14px" data-i18n="bias.h2">Model-level — final dataset</h4>
+          <div class="score-row"><span>Gradient Boosting</span><b>96.4%</b></div>
+          <div class="score-row"><span>Random Forest</span><b>95.5%</b></div>
+          <div class="score-row"><span>Logistic Regression</span><b>93.6%</b></div>
+          <div class="score-note" data-i18n="bias.note">Context: the 90.3% is the best text-modality F1, the 83.6% is the audio-modality F1 on the test set, and the 82.1% is the image modality's <strong>gender (genre) evaluation only</strong> — not the overall image pipeline. Sources: repo files <span class="mono">text_results.png</span>, <span class="mono">audio_results.png</span>, <span class="mono">image_results_genre.png</span> and <span class="mono">evaluation_final_dataset_advanced.xlsx</span>. The image pipeline's separate race evaluation is markedly lower (~63% F1) — that disparity is precisely what the project set out to expose.</div>
+        </div>
+      </article>
+
+      <article class="other-item reveal">
+        <div>
+          <h3 data-i18n="road.t">Road Accident Severity Prediction</h3>
+          <p data-i18n="road.d">Analysis of road accident data to predict severity and identify high-risk patterns, using Random Forest and Gradient Boosting.</p>
+          <div class="tags"><span class="tag">Random Forest</span><span class="tag">Gradient Boosting</span><span class="tag">Scikit-learn</span></div>
+        </div>
+        <a class="proj-link" href="https://github.com/HajarBoutayeb/gestion-accident-de-route" target="_blank" rel="noopener" data-i18n="link.repo">Repository →</a>
+      </article>
+
+      <article class="other-item reveal">
+        <div>
+          <h3 data-i18n="res.t">Student Residence Management (JEE)</h3>
+          <p data-i18n="res.d">Java JEE web application for managing student residences — rooms, residents, payments, maintenance and statistics. Earlier software-engineering work.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">JEE</span><span class="tag" data-i18n="tag.webapp">Web App</span></div>
+        </div>
+        <a class="proj-link" href="https://github.com/HajarBoutayeb/GestionResidenceEtudiante" target="_blank" rel="noopener" data-i18n="link.repo">Repository →</a>
+      </article>
+
+      <article class="other-item reveal">
+        <div>
+          <h3 data-i18n="iot.t">IoT Smart Parking System</h3>
+          <p data-i18n="iot.d">Smart parking prototype combining Arduino sensors with a Java web application for real-time space tracking.</p>
+          <div class="tags"><span class="tag">Arduino</span><span class="tag">IoT</span><span class="tag">Java</span></div>
+        </div>
+        <a class="proj-link" href="https://github.com/HajarBoutayeb/IoT-Smart-Parking-System" target="_blank" rel="noopener" data-i18n="link.repo">Repository →</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="label" data-i18n="exp.label">Experience</div><h2 data-i18n="exp.h2">Industry experience.</h2></div>
+    <div class="timeline">
+      <article class="tl-item reveal">
+        <div class="tl-when" data-i18n="exp.when">Apr — Aug 2026</div>
+        <div>
+          <h3 data-i18n="exp.role">Data Scientist Intern — Final-Year Project (PFE)</h3>
+          <div class="tl-org" data-i18n="exp.org">SRM-CS · AI &amp; Data Analytics Department · Casablanca</div>
+          <ul>
+            <li data-i18n="exp.li1"><strong>Dataset:</strong> Prepared and validated a multimodal water-meter dataset of 445 images — 92 real healthy images and 353 defective examples, synthetically generated with Gemini from the healthy images and then manually validated.</li>
+            <li data-i18n="exp.li2"><strong>VLM benchmark:</strong> Designed a structured multiple-choice (MCQ) evaluation and compared <strong>12 Vision-Language Models</strong> on anomaly detection, defect classification, localization and description.</li>
+            <li data-i18n="exp.li3"><strong>Tooling:</strong> Python, Pandas, Transformers, Gemini and Vertex AI (MaaS) across notebooks for description, generation, evaluation and defect-free meter analysis.</li>
+            <li data-i18n="exp.li4"><strong>Output:</strong> A methodology and comparison recruiters and engineers can audit — presented here without any confidential company data.</li>
+          </ul>
+          <div class="tags" style="margin-top:14px"><span class="tag" data-i18n="tag.vlm2">Vision-Language Models</span><span class="tag">Vertex AI</span><span class="tag">Gemini</span><span class="tag">Transformers</span><span class="tag" data-i18n="tag.dataval">Dataset Validation</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="label" data-i18n="edu.label">Education</div><h2 data-i18n="edu.h2">Academic background.</h2></div>
+    <div class="timeline">
+      <article class="tl-item reveal">
+        <div class="tl-when">2024 — 2026</div>
+        <div><h3 data-i18n="edu.m.t">Master's — Data Science &amp; Big Data</h3><div class="tl-org" data-i18n="edu.m.org">Faculty of Sciences Ben M'Sik (FSBM), Casablanca — Data Science track</div><ul><li data-i18n="edu.m.li1">M1: Oct 2024 – Jun 2025 · M2: Oct 2025 – Aug 2026</li><li data-i18n="edu.m.li2">Final-year project: Vision-Language Models for water meter anomaly diagnosis (at SRM-CS).</li></ul></div>
+      </article>
+      <article class="tl-item reveal">
+        <div class="tl-when">2021 — 2024</div>
+        <div><h3 data-i18n="edu.l.t">Licence — SMI (Computer Science &amp; Mathematics)</h3><div class="tl-org" data-i18n="edu.l.org">FSBM – UH2C · Database specialization</div><ul><li data-i18n="edu.l.li1">Foundations in mathematics, programming, databases and software engineering — the base for the Java/JEE and IoT projects in Other Projects.</li></ul></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="contact-box reveal">
+      <div class="label" data-i18n="contact.label">Contact</div>
+      <h2 data-i18n="contact.h2">Let's talk about a Junior Data or AI role.</h2>
+      <p data-i18n="contact.p">I'm available immediately for opportunities in Casablanca, Morocco. The fastest way to reach me is email or LinkedIn — and my code is all on GitHub.</p>
+      <div class="contact-links">
+        <a class="btn btn-primary" href="mailto:hajarboutayeb3@gmail.com">✉ hajarboutayeb3@gmail.com</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/hajar-boutayeb-25bb90303/" target="_blank" rel="noopener">LinkedIn →</a>
+        <a class="btn btn-ghost" href="https://github.com/HajarBoutayeb" target="_blank" rel="noopener">GitHub →</a>
+        <a class="btn btn-ghost" href="Hajar_Boutayeb_CV_Data_Science.pdf" download="Hajar_Boutayeb_CV_Data_Science.pdf" data-i18n="contact.cvds" target="_blank" rel="noopener">Download CV (Data Science)</a>
+        <a class="btn btn-ghost" href="Hajar_Boutayeb_CV_Data_Analytics.pdf" download="Hajar_Boutayeb_CV_Data_Analytics.pdf" data-i18n="contact.cvda" target="_blank" rel="noopener">Download CV (Data Analytics)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span data-i18n="footer.left">© 2026 Hajar Boutayeb — Casablanca, Morocco</span>
+    <span data-i18n="footer.mid">Data Scientist | AI &amp; Machine Learning</span>
+    <a href="#top" style="color:var(--teal);text-decoration:none;min-height:36px;display:inline-flex;align-items:center" data-i18n="footer.top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+var I18N={
+en:{
+"doc.title":"Hajar Boutayeb — Data Scientist | AI & Machine Learning",
+"nav.about":"About","nav.skills":"Skills","nav.projects":"Projects","nav.experience":"Experience","nav.education":"Education","nav.contact":"Contact","nav.cv":"Download CV ↓",
+"hero.title":"Data Scientist <span class='sep'>|</span> AI &amp; Machine Learning",
+"hero.lede":"Master's graduate in Data Science &amp; Big Data from FSBM Casablanca. I build and evaluate AI systems — Vision-Language Models, RAG chatbots and autonomous agents — and turn data into clear, decision-ready analysis.",
+"hero.pill1":"Open to Junior roles — Casablanca, Morocco","hero.pill2":"Casablanca, Morocco","hero.pill3":"Master Data Science &amp; Big Data — FSBM",
+"hero.view":"View Projects →","hero.cv":"Download CV","hero.contact":"Contact Me",
+"eval.aria":"Illustrative model evaluation flow","eval.title":"Model evaluation — how I work","eval.tag":"illustrative",
+"eval.s1":"Detect","eval.s1d":"Is there an anomaly in this image at all?","eval.s2":"Classify","eval.s2d":"What type of defect is it?","eval.s3":"Localize","eval.s3d":"Where exactly is the problem?","eval.s4":"Describe","eval.s4d":"Explain the finding in clear language.",
+"eval.note":"Illustrative workflow from the Water Meter VLM project — the four evaluation tasks applied across 12 Vision-Language Models. No scores are shown here; verified results live in the project repositories.",
+"about.label":"About","about.h2":"Data science, built on evaluation — not demos.",
+"about.p1":"I hold a <strong>Master's in Data Science &amp; Big Data (Data Science track) from FSBM, Casablanca</strong>. My final-year internship at <strong>SRM-CS</strong> focused on a question that matters in the field: can Vision-Language Models reliably diagnose anomalies on real water meters?",
+"about.p2":"To answer it properly, I prepared and validated a multimodal dataset of <strong>445 images</strong> — <strong>92 real healthy meter images and 353 defective examples, synthetically generated with Gemini from those healthy images and then manually validated</strong> — built a structured multiple-choice (MCQ) evaluation, and compared <strong>12 VLMs</strong> on detection, classification, localization and description.",
+"about.p3":"Alongside computer vision, I build <strong>LLM systems that do real work</strong>: a LangGraph multi-modal invoice agent and a LangChain RAG assistant, both with structured outputs and evaluation. I also do the analytics side well — SQL queries and Python data processing, then Tableau and Power BI dashboards grounded in careful data cleaning.",
+"about.p4":"<strong>My objective:</strong> a Junior Data Scientist, Data Analyst or AI Engineer role in Casablanca, Morocco, where evaluation and data quality matter as much as the model.",
+"facts.locL":"Location","facts.loc":"Casablanca, Morocco","facts.rolesL":"Target roles","facts.roles":"Junior Data Scientist · Data Analyst · AI Engineer · Computer Vision Engineer","facts.availL":"Availability","facts.avail":"Immediate","facts.langL":"Languages","facts.lang":"Arabic (native) · French (working) · English (learning)","facts.focusL":"Focus areas","facts.focus":"VLMs · LLMs &amp; RAG · AI Agents · Computer Vision · Data Analytics",
+"skills.label":"Technical Skills","skills.h2":"Only what my projects actually use.","skills.sub":"Every skill below appears in my GitHub repositories or my SRM-CS internship work.",
+"sk1.t":"Languages &amp; Data","sk1.d":"Day-to-day analysis, cleaning and modelling.","sk2.t":"AI, ML &amp; Computer Vision","sk2.d":"Model building and — just as important — model evaluation.","sk3.t":"LLMs, RAG &amp; Agents","sk3.d":"End-to-end LLM applications with structured outputs.","sk4.t":"Visualization &amp; BI","sk4.d":"Dashboards decision-makers can actually read.",
+"tag.vlm":"Vision-Language Models","tag.cv":"Computer Vision","tag.sankey":"Sankey Diagrams","tag.story":"Data Storytelling","tag.vlmeval":"VLM Evaluation","tag.rerank":"Reranking","tag.feat":"Feature Engineering","tag.hier":"Hierarchical Clustering","tag.webapp":"Web App","tag.vlm2":"Vision-Language Models","tag.dataval":"Dataset Validation",
+"proj.label":"Featured Projects","proj.h2":"Six projects that show the range.","proj.sub":"From VLM evaluation in industry to agents, RAG and analytics. Each links to its public GitHub repository.",
+"filter.aria":"Filter projects","filter.all":"All","filter.ai":"AI &amp; LLM","filter.cv":"Computer Vision","filter.analytics":"Data Analytics","filter.ml":"Machine Learning",
+"flag.badge":"★ Flagship — PFE at SRM-CS","flag.title":"Visual Analysis of Water Meter Anomalies with Vision-Language Models",
+"flag.p1":"<strong>Problem:</strong> Faulty water meters are normally diagnosed by manual visual inspection — slow, inconsistent, and hard to scale.",
+"flag.p2":"<strong>Approach:</strong> I prepared a multimodal dataset of 445 images (92 real healthy images + 353 defective examples, synthetically generated with Gemini from the healthy images and then manually validated), generated structured evaluation questions, and benchmarked <strong>12 existing VLMs</strong> across four tasks. Methodology only is shown here — no confidential SRM-CS data or internal images are published.",
+"link.github":"View on GitHub →","link.repo":"Repository →",
+"flag.viz":"Four evaluation tasks, one benchmark","task1.t":"Detection","task1.d":"Anomaly present — yes / no","task2.t":"Classification","task2.d":"Type of defect","task3.t":"Localization","task3.d":"Where the defect sits","task4.t":"Description","task4.d":"Readable explanation",
+"flag.note":"Schematic illustration — not a real meter image. Dataset: 92 healthy + 353 defective (synthetically generated with Gemini, manually validated) — 445 images in total.",
+"flag.svg1":"VLM ANALYSIS","flag.svg2":"detect · classify",
+"p2.k":"AI Agents · LangGraph","p2.t":"Autonomous Multi-Modal Invoice Agent","p2.p1":"<strong>Problem:</strong> Invoice processing mixes PDFs, scanned images and business rules — manual entry is slow and error-prone.","p2.p2":"<strong>Approach:</strong> A stateful LangGraph workflow: Docling parses PDFs, Groq Llama 3.1 handles text, Gemini 1.5 Flash handles vision, Pydantic enforces structured outputs, and conditional rules (amount thresholds, VIP tiers) route each invoice. Results persist to SQLite.",
+"p3.k":"RAG · LLMs · LangChain","p3.t":"RAG Chatbot — Tableau Course Assistant","p3.p1":"<strong>Problem:</strong> Students need precise answers from course documents, not generic chatbot guesses.","p3.p2":"<strong>Approach:</strong> A LangChain RAG pipeline over Tableau course material with MultiQuery Retrieval, reranking, and <strong>RAGAS evaluation</strong> of answer quality — powered by Groq Llama 3.3 70B.",
+"p4.k":"Data Analytics · Tableau","p4.t":"Global Health — Decision Dashboards","p4.p1":"<strong>Problem:</strong> A 134 MB global health dataset (22 variables) is unusable for decisions in raw form.","p4.p2":"<strong>Approach:</strong> Cleaning with median imputation and deduplication, engineered features (Disease Burden Index from DALYs, Risk Level), full EDA, and <strong>three Tableau dashboards</strong> covering global and geographical disease analysis.",
+"p5.k":"Machine Learning · Clustering","p5.t":"Marketing Customer Segmentation","p5.p1":"<strong>Problem:</strong> Treating every customer the same wastes marketing effort.","p5.p2":"<strong>Approach:</strong> Segmentation with <strong>K-Means and Hierarchical Clustering</strong>, comparing cluster structure to produce interpretable customer groups a marketing team can act on.",
+"p6.k":"NLP · Predictive ML","p6.t":"Predictive User Journey Analytics","p6.p1":"<strong>Problem:</strong> Can browsing behaviour predict whether a user will choose an Annual or Monthly subscription?","p6.p2":"<strong>Approach:</strong> End-to-end pipeline combining navigation analysis (Sankey diagrams), NLP features with TF-IDF, SMOTE for class imbalance, and Logistic Regression for prediction.",
+"other.label":"Other Projects","other.h2":"More work, smaller stage.",
+"bias.t":"Video Interview Bias Detection — Verified Evaluation","bias.d":"Master's project (FS Ben M'Sik, 2024–2025) on automatic bias detection in video interviews across text, audio and image. Scores below were verified on 17 Nov 2026 directly from the repository's evaluation images and its final evaluation spreadsheet — modality-level and model-level results are kept separate, as they measure different things.",
+"bias.h1":"Modality-level — best F1 per modality","bias.r1":"Text — Random Forest · best F1, text modality","bias.r2":"Audio — SVM · F1 on test set, audio modality","bias.r3":"Image — Gradient Boosting · F1-weighted, gender evaluation only","bias.h2":"Model-level — final dataset",
+"bias.note":"Context: the 90.3% is the best text-modality F1, the 83.6% is the audio-modality F1 on the test set, and the 82.1% is the image modality's <strong>gender (genre) evaluation only</strong> — not the overall image pipeline. Sources: repo files <span class='mono'>text_results.png</span>, <span class='mono'>audio_results.png</span>, <span class='mono'>image_results_genre.png</span> and <span class='mono'>evaluation_final_dataset_advanced.xlsx</span>. The image pipeline's separate race evaluation is markedly lower (~63% F1) — that disparity is precisely what the project set out to expose.",
+"road.t":"Road Accident Severity Prediction","road.d":"Analysis of road accident data to predict severity and identify high-risk patterns, using Random Forest and Gradient Boosting.",
+"res.t":"Student Residence Management (JEE)","res.d":"Java JEE web application for managing student residences — rooms, residents, payments, maintenance and statistics. Earlier software-engineering work.",
+"iot.t":"IoT Smart Parking System","iot.d":"Smart parking prototype combining Arduino sensors with a Java web application for real-time space tracking.",
+"exp.label":"Experience","exp.h2":"Industry experience.","exp.when":"Apr — Aug 2026","exp.role":"Data Scientist Intern — Final-Year Project (PFE)","exp.org":"SRM-CS · AI &amp; Data Analytics Department · Casablanca",
+"exp.li1":"<strong>Dataset:</strong> Prepared and validated a multimodal water-meter dataset of 445 images — 92 real healthy images and 353 defective examples, synthetically generated with Gemini from the healthy images and then manually validated.",
+"exp.li2":"<strong>VLM benchmark:</strong> Designed a structured multiple-choice (MCQ) evaluation and compared <strong>12 Vision-Language Models</strong> on anomaly detection, defect classification, localization and description.",
+"exp.li3":"<strong>Tooling:</strong> Python, Pandas, Transformers, Gemini and Vertex AI (MaaS) across notebooks for description, generation, evaluation and defect-free meter analysis.",
+"exp.li4":"<strong>Output:</strong> A methodology and comparison recruiters and engineers can audit — presented here without any confidential company data.",
+"edu.label":"Education","edu.h2":"Academic background.","edu.m.t":"Master's — Data Science &amp; Big Data","edu.m.org":"Faculty of Sciences Ben M'Sik (FSBM), Casablanca — Data Science track","edu.m.li1":"M1: Oct 2024 – Jun 2025 · M2: Oct 2025 – Aug 2026","edu.m.li2":"Final-year project: Vision-Language Models for water meter anomaly diagnosis (at SRM-CS).",
+"edu.l.t":"Licence — SMI (Computer Science &amp; Mathematics)","edu.l.org":"FSBM – UH2C · Database specialization","edu.l.li1":"Foundations in mathematics, programming, databases and software engineering — the base for the Java/JEE and IoT projects in Other Projects.",
+"contact.label":"Contact","contact.h2":"Let's talk about a Junior Data or AI role.","contact.p":"I'm available immediately for opportunities in Casablanca, Morocco. The fastest way to reach me is email or LinkedIn — and my code is all on GitHub.","contact.cvds":"Download CV (Data Science)","contact.cvda":"Download CV (Data Analytics)",
+"footer.left":"© 2026 Hajar Boutayeb — Casablanca, Morocco","footer.mid":"Data Scientist | AI &amp; Machine Learning","footer.top":"Back to top ↑",
+"theme.toLight":"Switch to light mode","theme.toDark":"Switch to dark mode","menu.open":"Open menu","menu.close":"Close menu"
+},
+fr:{
+"doc.title":"Hajar Boutayeb — Data Scientist | IA & Machine Learning",
+"nav.about":"À propos","nav.skills":"Compétences","nav.projects":"Projets","nav.experience":"Expérience","nav.education":"Formation","nav.contact":"Contact","nav.cv":"Télécharger le CV ↓",
+"hero.title":"Data Scientist <span class='sep'>|</span> IA &amp; Machine Learning",
+"hero.lede":"Diplômée d'un Master en Data Science &amp; Big Data à la FSBM de Casablanca. Je conçois et j'évalue des systèmes d'IA — modèles vision-langage, chatbots RAG et agents autonomes — et je transforme les données en analyses claires, prêtes pour la décision.",
+"hero.pill1":"Ouverte aux postes Junior — Casablanca, Maroc","hero.pill2":"Casablanca, Maroc","hero.pill3":"Master Data Science &amp; Big Data — FSBM",
+"hero.view":"Voir les projets →","hero.cv":"Télécharger le CV","hero.contact":"Me contacter",
+"eval.aria":"Flux d'évaluation de modèle, à titre illustratif","eval.title":"Évaluation de modèles — ma méthode de travail","eval.tag":"illustratif",
+"eval.s1":"Détecter","eval.s1d":"Y a-t-il une anomalie dans cette image ?","eval.s2":"Classifier","eval.s2d":"De quel type de défaut s'agit-il ?","eval.s3":"Localiser","eval.s3d":"Où se situe exactement le problème ?","eval.s4":"Décrire","eval.s4d":"Expliquer le résultat dans un langage clair.",
+"eval.note":"Flux illustratif issu du projet VLM sur les compteurs d'eau — les quatre tâches d'évaluation appliquées à 12 modèles vision-langage. Aucun score n'est affiché ici ; les résultats vérifiés se trouvent dans les dépôts des projets.",
+"about.label":"À propos","about.h2":"La data science, fondée sur l'évaluation — pas sur des démos.",
+"about.p1":"Je suis titulaire d'un <strong>Master en Data Science &amp; Big Data (parcours Data Science) de la FSBM, Casablanca</strong>. Mon stage de fin d'études chez <strong>SRM-CS</strong> portait sur une question concrète : les modèles vision-langage peuvent-ils diagnostiquer de façon fiable les anomalies sur de vrais compteurs d'eau ?",
+"about.p2":"Pour y répondre rigoureusement, j'ai préparé et validé un jeu de données multimodal de <strong>445 images</strong> — <strong>92 images réelles de compteurs sans défaut et 353 exemples défectueux, générés synthétiquement avec Gemini à partir de ces images de compteurs sans défaut puis validés manuellement</strong> — construit une évaluation structurée en QCM (questions à choix multiples), et comparé <strong>12 VLM</strong> sur la détection, la classification, la localisation et la description.",
+"about.p3":"En parallèle de la vision par ordinateur, je construis des <strong>systèmes LLM qui accomplissent un vrai travail</strong> : un agent de factures multimodal avec LangGraph et un assistant RAG avec LangChain, tous deux avec des sorties structurées et une évaluation. Je maîtrise aussi l'analyse de données : requêtes SQL et traitement des données avec Python, puis visualisation et tableaux de bord avec Tableau et Power BI, le tout fondé sur un nettoyage de données soigné.",
+"about.p4":"<strong>Mon objectif :</strong> un poste Junior Data Scientist, Data Analyst ou AI Engineer à Casablanca, au Maroc, où l'évaluation et la qualité des données comptent autant que le modèle.",
+"facts.locL":"Localisation","facts.loc":"Casablanca, Maroc","facts.rolesL":"Postes visés","facts.roles":"Junior Data Scientist · Data Analyst · AI Engineer · Computer Vision Engineer","facts.availL":"Disponibilité","facts.avail":"Immédiate","facts.langL":"Langues","facts.lang":"Arabe (langue maternelle) · Français (courant) · Anglais (en apprentissage)","facts.focusL":"Domaines d'expertise","facts.focus":"VLM · LLM &amp; RAG · Agents IA · Vision par ordinateur · Analyse de données",
+"skills.label":"Compétences techniques","skills.h2":"Uniquement ce que mes projets utilisent réellement.","skills.sub":"Chaque compétence ci-dessous figure dans mes dépôts GitHub ou dans mon travail de stage chez SRM-CS.",
+"sk1.t":"Langages &amp; Données","sk1.d":"Analyse, nettoyage et modélisation au quotidien.","sk2.t":"IA, ML &amp; Vision par ordinateur","sk2.d":"Construction de modèles et — tout aussi important — évaluation de modèles.","sk3.t":"LLM, RAG &amp; Agents","sk3.d":"Applications LLM de bout en bout avec sorties structurées.","sk4.t":"Visualisation &amp; BI","sk4.d":"Des tableaux de bord que les décideurs peuvent vraiment lire.",
+"tag.vlm":"Modèles Vision-Langage","tag.cv":"Vision par ordinateur","tag.sankey":"Diagrammes de Sankey","tag.story":"Data storytelling","tag.vlmeval":"Évaluation VLM","tag.rerank":"Reclassement","tag.feat":"Création de variables dérivées","tag.hier":"Clustering hiérarchique","tag.webapp":"Application Web","tag.vlm2":"Modèles Vision-Langage","tag.dataval":"Validation de données",
+"proj.label":"Projets phares","proj.h2":"Six projets qui montrent l'étendue du travail.","proj.sub":"De l'évaluation de VLM en entreprise aux agents, au RAG et à l'analytique. Chacun renvoie à son dépôt GitHub public.",
+"filter.aria":"Filtrer les projets","filter.all":"Tous","filter.ai":"IA &amp; LLM","filter.cv":"Vision par ordinateur","filter.analytics":"Analyse de données","filter.ml":"Machine Learning",
+"flag.badge":"★ Projet phare — PFE chez SRM-CS","flag.title":"Analyse visuelle des anomalies de compteurs d'eau avec les modèles vision-langage",
+"flag.p1":"<strong>Problème :</strong> les compteurs d'eau défectueux sont habituellement diagnostiqués par inspection visuelle manuelle — lente, incohérente et difficile à déployer à grande échelle.",
+"flag.p2":"<strong>Approche :</strong> j'ai préparé un jeu de données multimodal de 445 images (92 images réelles de compteurs sans défaut + 353 exemples défectueux, générés synthétiquement avec Gemini à partir des images de compteurs sans défaut puis validés manuellement), généré des questions d'évaluation structurées, et comparé <strong>12 VLM existants</strong> sur quatre tâches. Seule la méthodologie est présentée ici — aucune donnée confidentielle de SRM-CS ni image interne n'est publiée.",
+"link.github":"Voir sur GitHub →","link.repo":"Dépôt →",
+"flag.viz":"Quatre tâches d'évaluation, un seul benchmark","task1.t":"Détection","task1.d":"Anomalie présente — oui / non","task2.t":"Classification","task2.d":"Type de défaut","task3.t":"Localisation","task3.d":"Emplacement du défaut","task4.t":"Description","task4.d":"Explication lisible",
+"flag.note":"Illustration schématique — pas une vraie image de compteur. Jeu de données : 92 compteurs sans défaut + 353 défectueux (générés synthétiquement avec Gemini, validés manuellement) — 445 images au total.",
+"flag.svg1":"ANALYSE VLM","flag.svg2":"détecter · classifier",
+"p2.k":"Agents IA · LangGraph","p2.t":"Agent autonome multimodal de traitement de factures","p2.p1":"<strong>Problème :</strong> le traitement des factures mélange PDF, images scannées et règles métier — la saisie manuelle est lente et source d'erreurs.","p2.p2":"<strong>Approche :</strong> un workflow LangGraph avec état : Docling analyse les PDF, Groq Llama 3.1 traite le texte, Gemini 1.5 Flash traite la vision, Pydantic impose des sorties structurées, et des règles conditionnelles (seuils de montant, niveaux VIP) orientent chaque facture. Les résultats sont enregistrés dans SQLite.",
+"p3.k":"RAG · LLM · LangChain","p3.t":"Chatbot RAG — Assistant de cours Tableau","p3.p1":"<strong>Problème :</strong> les étudiants ont besoin de réponses précises issues des documents de cours, pas de suppositions génériques de chatbot.","p3.p2":"<strong>Approche :</strong> un pipeline RAG LangChain sur les supports de cours Tableau, avec recherche MultiQuery, reclassement, et <strong>évaluation RAGAS</strong> de la qualité des réponses — propulsé par Groq Llama 3.3 70B.",
+"p4.k":"Analyse de données · Tableau","p4.t":"Santé mondiale — Tableaux de bord décisionnels","p4.p1":"<strong>Problème :</strong> un jeu de données de santé mondiale de 134 Mo (22 variables) est inexploitable pour décider sous sa forme brute.","p4.p2":"<strong>Approche :</strong> nettoyage avec imputation par la médiane et déduplication, variables dérivées créées (indice de charge de morbidité calculé à partir des DALY, niveau de risque), EDA complète, et <strong>trois tableaux de bord Tableau</strong> couvrant l'analyse mondiale et géographique des maladies.",
+"p5.k":"Machine Learning · Clustering","p5.t":"Segmentation marketing des clients","p5.p1":"<strong>Problème :</strong> traiter tous les clients de la même façon gaspille l'effort marketing.","p5.p2":"<strong>Approche :</strong> segmentation avec <strong>K-Means et clustering hiérarchique</strong>, en comparant la structure des clusters pour produire des groupes de clients interprétables et exploitables par une équipe marketing.",
+"p6.k":"NLP · ML prédictif","p6.t":"Analyse prédictive du parcours utilisateur","p6.p1":"<strong>Problème :</strong> le comportement de navigation peut-il prédire si un utilisateur choisira un abonnement annuel ou mensuel ?","p6.p2":"<strong>Approche :</strong> pipeline de bout en bout combinant analyse de navigation (diagrammes de Sankey), représentations textuelles NLP avec TF-IDF, SMOTE pour le déséquilibre des classes, et régression logistique pour la prédiction.",
+"other.label":"Autres projets","other.h2":"D'autres travaux, à plus petite échelle.",
+"bias.t":"Détection de biais dans les entretiens vidéo — Évaluation vérifiée","bias.d":"Projet de Master (FS Ben M'Sik, 2024–2025) sur la détection automatique de biais dans les entretiens vidéo à partir du texte, de l'audio et de l'image. Les scores ci-dessous ont été vérifiés le 17 nov. 2026 directement à partir des images d'évaluation du dépôt et de son tableur d'évaluation final — les résultats par modalité et par modèle sont présentés séparément, car ils mesurent des choses différentes.",
+"bias.h1":"Par modalité — meilleur F1 par modalité","bias.r1":"Texte — Random Forest · meilleur F1, modalité texte","bias.r2":"Audio — SVM · F1 sur le jeu de test, modalité audio","bias.r3":"Image — Gradient Boosting · F1 pondéré, évaluation du genre uniquement","bias.h2":"Par modèle — jeu de données final",
+"bias.note":"Contexte : le 90,3 % est le meilleur F1 de la modalité texte, le 83,6 % est le F1 de la modalité audio sur le jeu de test, et le 82,1 % correspond <strong>uniquement à l'évaluation du genre</strong> de la modalité image — pas à l'ensemble du pipeline image. Sources : fichiers du dépôt <span class='mono'>text_results.png</span>, <span class='mono'>audio_results.png</span>, <span class='mono'>image_results_genre.png</span> et <span class='mono'>evaluation_final_dataset_advanced.xlsx</span>. L'évaluation distincte de l'origine ethnique du pipeline image est nettement plus basse (~63 % de F1) — c'est précisément cette disparité que le projet cherchait à mettre en évidence.",
+"road.t":"Prédiction de la gravité des accidents de la route","road.d":"Analyse de données d'accidents de la route pour prédire la gravité et identifier les schémas à haut risque, avec Random Forest et Gradient Boosting.",
+"res.t":"Gestion de résidence étudiante (JEE)","res.d":"Application web Java JEE pour gérer les résidences étudiantes — chambres, résidents, paiements, maintenance et statistiques. Travail antérieur en génie logiciel.",
+"iot.t":"Système IoT de parking intelligent","iot.d":"Prototype de parking intelligent combinant des capteurs Arduino et une application web Java pour le suivi des places en temps réel.",
+"exp.label":"Expérience","exp.h2":"Expérience en entreprise.","exp.when":"Avr. — Août 2026","exp.role":"Stagiaire Data Scientist — Projet de fin d'études (PFE)","exp.org":"SRM-CS · Département IA &amp; Data Analytics · Casablanca",
+"exp.li1":"<strong>Jeu de données :</strong> préparation et validation d'un jeu de données multimodal de compteurs d'eau de 445 images — 92 images réelles de compteurs sans défaut et 353 exemples défectueux, générés synthétiquement avec Gemini à partir des images de compteurs sans défaut puis validés manuellement.",
+"exp.li2":"<strong>Benchmark VLM :</strong> conception d'une évaluation structurée en QCM et comparaison de <strong>12 modèles vision-langage</strong> sur la détection d'anomalies, la classification des défauts, la localisation et la description.",
+"exp.li3":"<strong>Outils :</strong> Python, Pandas, Transformers, Gemini et Vertex AI (MaaS) dans des notebooks pour la description, la génération, l'évaluation et l'analyse des compteurs sans défaut.",
+"exp.li4":"<strong>Résultat :</strong> une méthodologie et une comparaison que recruteurs et ingénieurs peuvent auditer — présentées ici sans aucune donnée confidentielle de l'entreprise.",
+"edu.label":"Formation","edu.h2":"Parcours académique.","edu.m.t":"Master — Data Science &amp; Big Data","edu.m.org":"Faculté des Sciences Ben M'Sik (FSBM), Casablanca — parcours Data Science","edu.m.li1":"M1 : oct. 2024 – juin 2025 · M2 : oct. 2025 – août 2026","edu.m.li2":"Projet de fin d'études : modèles vision-langage pour le diagnostic des anomalies de compteurs d'eau (chez SRM-CS).",
+"edu.l.t":"Licence — SMI (Sciences Mathématiques et Informatique)","edu.l.org":"FSBM – UH2C · Spécialisation Bases de données","edu.l.li1":"Fondements en mathématiques, programmation, bases de données et génie logiciel — la base des projets Java/JEE et IoT présentés dans Autres projets.",
+"contact.label":"Contact","contact.h2":"Parlons d'un poste Junior en Data ou en IA.","contact.p":"Je suis disponible immédiatement pour des opportunités à Casablanca, au Maroc. Le moyen le plus rapide de me joindre est l'e-mail ou LinkedIn — et tout mon code est sur GitHub.","contact.cvds":"Télécharger le CV (Data Science)","contact.cvda":"Télécharger le CV (Data Analytics)",
+"footer.left":"© 2026 Hajar Boutayeb — Casablanca, Maroc","footer.mid":"Data Scientist | IA &amp; Machine Learning","footer.top":"Retour en haut ↑",
+"theme.toLight":"Passer au mode clair","theme.toDark":"Passer au mode sombre","menu.open":"Ouvrir le menu","menu.close":"Fermer le menu"
+}};
+
+// Theme
+var themeBtn=document.getElementById('themeBtn');
+function currentLang(){return document.documentElement.getAttribute('data-lang')||'en';}
+function syncThemeBtn(){
+  var dark=document.documentElement.getAttribute('data-theme')!=='light';
+  themeBtn.textContent=dark?'☀':'☾';
+  var d=I18N[currentLang()]||I18N.en;
+  themeBtn.setAttribute('aria-label',dark?d['theme.toLight']:d['theme.toDark']);
+  themeBtn.setAttribute('title',dark?d['theme.toLight']:d['theme.toDark']);
+}
+function setTheme(t,save){
+  document.documentElement.setAttribute('data-theme',t);
+  if(save){try{localStorage.setItem('hb-theme',t);}catch(e){}}
+  syncThemeBtn();
+}
+themeBtn.addEventListener('click',function(){
+  var next=document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';
+  setTheme(next,true);
+});
+
+// Language
+function setLang(l,save){
+  var d=I18N[l]||I18N.en;
+  document.documentElement.setAttribute('lang',l);
+  document.documentElement.setAttribute('data-lang',l);
+  document.title=d['doc.title'];
+  document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(d[k]!==undefined){el.innerHTML=d[k];}});
+  document.querySelectorAll('[data-i18n-aria]').forEach(function(el){var k=el.getAttribute('data-i18n-aria');if(d[k]!==undefined){el.setAttribute('aria-label',d[k]);}});
+  document.querySelectorAll('[data-lang-btn]').forEach(function(b){var on=b.getAttribute('data-lang-btn')===l;b.classList.toggle('active',on);b.setAttribute('aria-pressed',on);});
+  if(save){try{localStorage.setItem('hb-lang',l);}catch(e){}}
+  syncThemeBtn();
+  if(typeof menuBtn!=='undefined'&&menuBtn){var navOpen=(typeof navLinks!=='undefined'&&navLinks)?navLinks.classList.contains('open'):false;menuBtn.setAttribute('aria-label',navOpen?d['menu.close']:d['menu.open']);}
+}
+document.querySelectorAll('[data-lang-btn]').forEach(function(b){b.addEventListener('click',function(){setLang(b.getAttribute('data-lang-btn'),true);});});
+
+// Init from saved prefs (defaults: dark theme, English)
+(function(){
+  var t='dark',l='en';
+  try{t=localStorage.getItem('hb-theme')||'dark';l=localStorage.getItem('hb-lang')||'en';}catch(e){}
+  if(t!=='light')t='dark'; if(l!=='fr')l='en';
+  setTheme(t,false); setLang(l,false);
+})();
+
+// Mobile menu
+var menuBtn=document.getElementById('menuBtn'), navLinks=document.getElementById('navLinks');
+function syncMenuLabel(){var d=I18N[currentLang()]||I18N.en;var open=navLinks.classList.contains('open');menuBtn.setAttribute('aria-expanded',open);menuBtn.setAttribute('aria-label',open?d['menu.close']:d['menu.open']);}
+function closeMenu(){navLinks.classList.remove('open');syncMenuLabel();}
+menuBtn.addEventListener('click',function(){navLinks.classList.toggle('open');syncMenuLabel();});
+navLinks.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){closeMenu();});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&navLinks.classList.contains('open')){closeMenu();menuBtn.focus();}});
+syncMenuLabel();
+
+// Project filter (featured grid + flagship)
+var filterBtns=document.querySelectorAll('.filter-btn');
+var filterables=document.querySelectorAll('[data-cat]');
+filterBtns.forEach(function(btn){
+  btn.addEventListener('click',function(){
+    filterBtns.forEach(function(b){b.classList.remove('active');b.setAttribute('aria-pressed','false');});
+    btn.classList.add('active');
+    btn.setAttribute('aria-pressed','true');
+    var f=btn.getAttribute('data-filter');
+    filterables.forEach(function(el){
+      if(f==='all'||el.getAttribute('data-cat').split(' ').indexOf(f)>-1){el.classList.remove('hidden-by-filter');}
+      else{el.classList.add('hidden-by-filter');}
+    });
+  });
+});
+
+// Reveal on scroll
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+}else{
+  document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});
+}
+</script>
+</body>
+</html>
